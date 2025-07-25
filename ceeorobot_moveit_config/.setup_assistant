@@ -3,5 +3,23 @@ moveit_setup_assistant_config:
     package: ceeorobot_description
     relative_path: urdf/ceeorobot_cell.urdf.xacro
   srdf:
-    relative_path: config/ceeorobot_cell.srdf
+    relative_path: config/ceeorobot.srdf
   package_settings:
+    author_name: Kat Allen
+    author_email: kat.allen@tufts.edu
+    generated_timestamp: 1753460442
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

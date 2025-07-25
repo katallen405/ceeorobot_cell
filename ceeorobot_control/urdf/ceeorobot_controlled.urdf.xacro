@@ -51,7 +51,7 @@
 
   <!--If you had more controlled devices in your description, e.g. a gripper, you can add another ros2_control tag here-->
   <xacro:robotiq_hande_ros2_control
-      prefix="${ur_type}_"
+      prefix=""
       parent="${ur_type}_tool0"
       name="handE"
       grip_pos_min="0"

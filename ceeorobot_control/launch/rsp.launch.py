@@ -60,9 +60,9 @@ def generate_launch_description():
             " ",
             PathJoinSubstitution(
                 [
-                    FindPackageShare("ceeorobot_control"),
+                    FindPackageShare("ceeorobot_description"),
                     "urdf",
-                    "ceeorobot_controlled.urdf.xacro",
+                    "ceeorobot_cell.urdf.xacro",
                 ]
             ),
             " ",

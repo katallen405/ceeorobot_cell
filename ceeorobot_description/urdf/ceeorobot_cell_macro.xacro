@@ -19,18 +19,21 @@
       <child link="table" />
     </joint>
 
-    <link name="table">
+  <link name="table">
       <visual>
         <geometry>
+          <mesh filename="package://ceeorobot_description/meshes/fzi_table.dae"/>
         </geometry>
         <origin rpy="0 0 0" xyz="0.75 0.5 -1"/>
       </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://ceeorobot_description/meshes/fzi_table.dae"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="0.75 0.5 -1"/>
+      </collision>
     </link>
     
-    <material name="white">
-      <color rgba="1 1 1 1"/>
-    </material>
-
     <link name="robot_mount"/>
     <joint name="base_to_robot_mount" type="fixed">
       <parent link="table"/>
