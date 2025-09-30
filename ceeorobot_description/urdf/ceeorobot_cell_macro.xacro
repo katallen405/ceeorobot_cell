@@ -16,29 +16,29 @@
     <joint name="table_base_joint" type="fixed">
       <xacro:insert_block name="origin" />
       <parent link="${parent}" />
-      <child link="table" />
+      <child link="cart" />
     </joint>
 
-  <link name="table">
+  <link name="cart">
       <visual>
         <geometry>
-          <mesh filename="package://ceeorobot_description/meshes/fzi_table.dae"/>
+          <mesh filename="package://ceeorobot_description/meshes/cart.stl"/>
         </geometry>
-        <origin rpy="0 0 0" xyz="0.75 0.5 -1"/>
+        <origin rpy="0 0 0" xyz="0 0 1"/>
       </visual>
       <collision>
         <geometry>
-          <mesh filename="package://ceeorobot_description/meshes/fzi_table.dae"/>
+          <mesh filename="package://ceeorobot_description/meshes/cart.stl"/>
         </geometry>
-        <origin rpy="0 0 0" xyz="0.75 0.5 -1"/>
+        <origin rpy="0 0 0" xyz="0 0 1"/>
       </collision>
     </link>
     
     <link name="robot_mount"/>
     <joint name="base_to_robot_mount" type="fixed">
-      <parent link="table"/>
+      <parent link="cart"/>
       <child link="robot_mount"/>
-      <origin xyz="0.845 0.85 0" rpy="0 0 ${pi}" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
     </joint>
 
     <!--This will create the specific robot-->

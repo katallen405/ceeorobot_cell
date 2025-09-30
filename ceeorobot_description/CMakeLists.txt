@@ -17,7 +17,7 @@ find_package(ur_description REQUIRED)
 
 # Copy necessary files to designated locations in the project
 install (
-  DIRECTORY urdf rviz  
+  DIRECTORY urdf rviz meshes
   DESTINATION share/${PROJECT_NAME}
   )
 install (
@@ -28,7 +28,6 @@ install (
   DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}
   )
-
 # Automates the process of setting up linting for the package, which
 # is the process of running tools that analyze the code for potential
 # errors, style issues, and other discrepancies that do not adhere to
