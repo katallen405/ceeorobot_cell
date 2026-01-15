@@ -1,0 +1,12 @@
+Torque control from ROS:
+Start the ros node 
+ros2 launch ceeorobot_control start_robot.launch.py 
+
+Switch to the torque controller:
+roscontrol set_controller_state scaled_joint_trajectory_controller inactive 
+roscontrol set_controller_state forward_effort_controller active 
+
+Set the teachpendant to Local control and activate the remote control *program*
+
+Now you can send torque commands:
+rostopic pub /forward_effort_controller/commands std_msgs/msg/Float64MultiArray "{data:[0.0,-2.0,0.0,0.0,0.0,0.0]}"
