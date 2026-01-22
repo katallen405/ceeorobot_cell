@@ -117,7 +117,7 @@ def generate_launch_description():
             "kinematics_parameters_file",
             default_value=PathJoinSubstitution(
                 [
-                    FindPackageShare("my_robot_cell_control"),
+                    FindPackageShare("ceeorobot_control"),
                     "config",
                     "my_robot_calibration.yaml",
                 ]
